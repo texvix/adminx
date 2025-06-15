@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import Layout from "@/components/Layout";
 import Link from "next/link";
 
 const dummyScooterData = {
@@ -37,16 +36,14 @@ export default function ScooterDetail() {
 
   if (!scooter) {
     return (
-      <Layout>
-        <div className="text-center py-10 text-red-500 text-lg font-semibold">
-          Kein Roller mit dieser ID gefunden.
-        </div>
-      </Layout>
+      <div className="text-center py-10 text-red-500 text-lg font-semibold">
+        Kein Roller mit dieser ID gefunden.
+      </div>
     );
   }
 
   return (
-    <Layout>
+    <>
       <div className="mb-6">
         <Link
           href="/scooters"
@@ -72,6 +69,6 @@ export default function ScooterDetail() {
           <div className="text-lg font-bold">{scooter.bookings}</div>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }

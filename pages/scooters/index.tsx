@@ -1,4 +1,3 @@
-import Layout from "@/components/Layout";
 import Link from "next/link";
 
 const scooters = [
@@ -15,7 +14,7 @@ const statusColor = {
 
 export default function ScooterOverview() {
   return (
-    <Layout>
+    <>
       <h1 className="text-2xl font-bold mb-4">Rollerübersicht</h1>
       <table className="w-full border text-sm bg-white shadow-sm rounded-md overflow-hidden">
         <thead className="bg-gray-100">
@@ -44,6 +43,6 @@ export default function ScooterOverview() {
           ))}
         </tbody>
       </table>
-    </Layout>
+    </>
   );
 }
